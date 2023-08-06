@@ -1,0 +1,112 @@
+.bannerSection{
+    padding: 179px 10px 49px;
+    background:url(../assets/imgs/banner\ img.jpg) center/ cover no-repeat ;
+    color: #fff;
+}
+
+.bannerSectionTitle{
+    color: #fff;
+}
+
+.bannerSection span{
+    display: block;
+    width: 504px;
+    height: 8px;
+    border-radius: 2px;
+    border: 1px solid #000;
+    background: linear-gradient(90deg, #E27410 0%, rgba(223, 124, 33, 0.91) 9.38%, rgba(209, 160, 115, 0.45) 55.21%, rgba(196, 196, 196, 0.00) 100%, #025EA1 100%, #025EA1 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 16px 0;
+}
+
+.bannerSectionText{
+    font-weight: 400;
+    line-height: 145%;
+    padding-bottom: 105px;
+}
+
+.advantages{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.advantage{
+    width: 462px;
+    padding: 16px 32px 21px 80px;
+    border-radius: 4px;
+    background: #FFF;
+    color: #2D3343;
+    position: relative;
+    transition: all 0.8s ease-out;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.advantage::before{
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../assets/icons/Iocns.png) -166px -115px ;
+    position: absolute;
+    left: 24px;
+}
+
+.advantage:last-child::before{
+    background-position: -92px -115px;
+}
+
+.advantage:nth-child(2)::before{
+    background-position: -242px -365px;
+    background-position: -18px -115px;
+}
+.advantage:hover{
+    background-color: #F47A0B;
+    box-shadow: 0px 12px 30px 0px rgba(68, 32, 0, 0.15);
+    transform: translateY(-10%);
+}
+
+.advantage:hover::before{
+    background: url(../assets/icons/advantageIcon1.svg) ;
+}
+
+.advantage:nth-child(2):hover::before{
+    background: url(../assets/icons/advantageIcon2.svg) ;
+}
+
+.advantage:last-child:hover::before{
+    background: url(../assets/icons/advantageIcon3.svg) ;
+}
+
+
+@media (max-width: 1024px) {
+    .advantages{
+        gap: 13px;
+    }
+    .advantage{
+        font-size: 14px;
+        white-space: pre-wrap;
+    }
+}
+
+@media (max-width: 875px) {
+    .bannerSectionTitle{
+        font-size: 48px;
+    }
+    .advantage{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .advantages{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantage{
+        width: 288px;
+        white-space: nowrap;
+    }
+}

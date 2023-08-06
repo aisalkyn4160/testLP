@@ -1,0 +1,487 @@
+.header{
+    background-color: #F4F7FB;
+}
+.header .container{
+    padding: 16px 10px 0px;
+    display: flex;
+    gap: 75px;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 122px; 
+    height: 122px;
+}
+
+.logo img{
+    width: 100%;
+}
+.navWrapper{
+    width: 84%;
+    padding-top: 12px;
+}
+
+.navLinks{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.navLinksLists{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.navLinksLists li {
+    transition: all 0.8s ease-out;
+}
+.navLinksLists li:hover{
+    color: #F47A0B;
+    text-decoration: underline;
+
+}
+
+.btnForVision, 
+.btnPhoneNumber{
+    color: #2D3343;
+    font-size: 14px;
+    border: 1px solid #F47A0B;
+    padding: 7px 20px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btnForVision::before,
+.btnPhoneNumber::before{
+    content: '';
+    width: 35px;
+    height: 24px;
+    background: url(../assets/icons/Iocns.png) -66px -17px no-repeat;
+}
+
+.btnPhoneNumber{
+    font-size: 16px;
+    border: none;
+}
+
+.btnPhoneNumber::before{
+    background-position: -52px -42px;
+}
+
+.navMenu{
+    display: flex;
+    justify-content: space-between;
+    color: #363B3E;
+    background-color: #F4F7FB;
+}
+
+.navMenu li{
+    transition: color 0.5s ease-out;
+    padding-bottom: 44px;
+    position: relative;
+    background-color: #F4F7FB;
+}
+
+.navMenu li:first-child{
+    display: none;
+}
+
+.navMenu li:hover{
+    color: #F47A0B;
+    position: relative;
+}
+
+.navMenu li:hover::after{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../assets/icons/Rectangle\ 18.png) no-repeat;
+    position: absolute;
+    top: -11px;
+    left: 45%;
+}
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 66px;
+  left: -20px;
+  width: 453px;
+  border: none;
+  border-radius: 2px;
+  background-color: #F4F7FB;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10), 0px 2px 0px 0px #F47A0B inset;
+  z-index: 1;
+}
+
+.dropdownMenu a {
+  color: black;
+  padding: 24px 0px 24px 30px;
+  border-top: 2px solid #f2f2f2;
+  display: block;
+}
+
+.dropdownMenu a:hover {
+  color: #F47A0B;
+  position: relative;
+}
+
+.dropdownMenu a:hover::before{
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: url('../assets/icons/Rectangle\ 19.svg' ) center/ 100% 100% no-repeat;
+}
+
+.navMenu li:hover .dropdownMenu {
+  display: block;
+  transition: 0.5s;
+}
+.headerOnScroll{
+    background-color: #F4F7FB;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+}
+.headerOnScroll .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.headerOnScroll .navMenu{
+    display: none;
+}
+
+.headerOnScroll .navMenu li{
+    color: #2D3343;
+    padding: 24px 257px 24px 30px;
+    border-top: 1px solid #F4F7FB;
+}
+
+.headerOnScroll .navMenu li:hover{
+    color: #E27410;
+}
+
+.headerOnScroll .navMenu li:hover::after{
+    top: 23px;
+    left: 90%;
+    width: 35px;
+    height: 35px;
+    background: url('../assets/icons/Iocns.png') -400px -16px no-repeat;
+}
+.headerOnScroll .navMenu li:first-child:hover::after{
+    display: none;
+}
+.headerOnScroll .dropdownMenu{
+    box-shadow: none;
+    font-size: 16px;
+    width: 300px;
+    position: static;
+}
+
+.headerOnScroll .dropdownMenu a{
+    padding: 16px;
+    border-top: none;
+}
+
+.headerOnScroll .dropdownMenu a:hover{
+    color: #F47A0B;
+  }
+  
+.headerOnScroll  .dropdownMenu a:hover::before{
+      content: '';
+      display: none;
+  }
+.headerOnScroll .logo{
+    display: none;
+}
+.headerOnScroll .navMenu li:first-child{
+    display: block;
+}
+.headerOnScroll .navMenu .logo{
+    display: block;
+}
+.burgerMenu{
+    display: none;
+}
+.headerOnScroll .burgerMenu{
+    display: block;
+}
+.headerOnScroll .burger {
+    display: block;
+    width: 45px;
+    height: 46px;
+    background: url('../assets/icons/Iocns.png') -245px -16px no-repeat;
+}
+
+.headerOnScroll .active{
+    background-position: -293px -13px ;
+}
+
+.headerOnScroll .navMenu.active{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    width: 375px;
+    /* box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10), 0px 2px 0px 0px #F47A0B inset; */
+}
+
+@media (max-width: 1160px) {
+    .logo{
+        display: none;
+    }
+    .header .container{
+        flex-direction: column;
+    }
+
+    .btnForVision,
+    .btnPhoneNumber{
+        padding: 5px 10px;
+    }
+
+    .headerOnScroll .container{
+        flex-direction: row;
+    }
+    .navWrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .navLinks{
+        width: 100%;
+        gap: 20px;
+    }
+    .navLinksLists{
+        width: 47%;
+        margin: 0;
+    }
+    .navLinksLists a{
+        white-space: nowrap;
+    }
+    .navBtns{
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .navMenu{
+        align-items: center;
+    }
+    .navMenu li:first-child {
+        display: block;
+    }
+
+    .navMenu li:first-child:hover::after{
+        display: none;
+    }
+
+    .navMenu .logo{
+        display: block;
+        width: 64px;
+        height: 64px;
+    }
+
+
+    .headerOnScroll .navBtns{
+        width: 70%;
+    }
+}
+
+@media (max-width: 875px) {
+    .btnForVision{
+        border: none;
+    }
+    .btnForVision span{
+        display: none;
+    }
+
+    .btnForVision::before{
+        width: 34px;
+        height: 34px;
+        background:url(/assets/icons/vision_button.svg) no-repeat ;
+    }
+    .navLinksLists{
+        width: 60%;
+    }
+    .navBtns{
+        width: 35%;
+    }
+
+    .headerOnScroll .navLinksLists li{
+        display: none ;
+    }
+    
+    .navMenu li:first-child{
+        font-size: 16px;
+        padding-bottom: 25px;
+    }
+    .navMenu li:nth-child(7),
+    .navMenu li:nth-child(8){
+        display: none;
+    }
+
+    .dropdownMenu{
+        width: 250px;
+        top: 65px;
+    }
+
+    
+
+}
+
+@media(max-width:672px) {
+    .header .container{
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .header .burgerMenu{
+        display: block;
+    }
+
+    .header .burger {
+        display: block;
+        width: 45px;
+        height: 46px;
+        background: url('../assets/icons/Iocns.png') -245px -16px no-repeat;
+    }
+    
+    .header .active{
+        background-position: -293px -13px ;
+    }
+    .header .logo{
+        display: block;
+        width: 48px;
+        height: 65px;
+    }
+
+    .logo img{
+        width: 48px;
+    }
+    
+    .navLinksLists{
+        display: none;
+    }
+
+    .btnPhoneNumber span{
+        display: none;
+    }
+    .btnPhoneNumber::before{
+        width: 34px;
+        height: 34px;
+        top: 0;
+        left: 0;
+        background: url(/assets/icons/pgone_button.svg)  no-repeat;
+    }
+
+    .navMenu li:first-child{
+        display: none;
+    }
+
+    .header .burgerMenu{
+        display: block;
+    }
+    .header .burgerMenu .burger{
+        display: block;
+    }
+
+    .navLinks{
+        justify-content: flex-end;
+    }
+
+    .header .container{
+        width: 100%;
+        position: fixed;
+        background: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+    
+    .header .navMenu{
+        display: none;
+    }
+    
+    .header .navMenu li{
+        color: black;
+        padding: 24px 0px 24px 30px;
+        border-top: 1px solid #F2F2F2;
+        width: 100%;
+    }
+    
+    .header .navMenu li:hover{
+        color: #E27410;
+    }
+    
+    .header .navMenu li:hover::after{
+        top: 23px;
+        left: 90%;
+        width: 35px;
+        height: 35px;
+        background: url('../assets/icons/Iocns.png') -400px -16px no-repeat;
+    }
+    .header .navMenu li:first-child:hover::after{
+        display: none;
+    }
+    .header .dropdownMenu{
+        box-shadow: none;
+        font-size: 16px;
+        width: 100%;
+        position: static;
+    }
+    
+    .dropdownMenu a{
+        padding: 16px;
+        border-top: 0;
+    }
+    
+    .header .dropdownMenu a:hover{
+        color: #F47A0B;
+      }
+      
+    .header .dropdownMenu a:hover::before{
+          content: '';
+          display: none;
+      }
+   
+    .header .navMenu li:first-child{
+        display: none;
+    }
+    
+    .header .active{
+        background-position: -293px -13px ;
+    }
+    
+    .header .navMenu.active{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.10), 0px 2px 0px 0px #F47A0B inset;
+    }
+
+}

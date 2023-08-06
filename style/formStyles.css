@@ -1,0 +1,192 @@
+.formSection{
+    padding: 120px 0;
+    color: #fff;
+    background: var(--linear, linear-gradient(90deg, #014C88 0%, #015DA0 47.40%, #026AB3 100%));
+}
+
+.formContacts{
+    display: flex;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 48px);
+    gap: 24px;
+    padding-right: 80px;
+    border-right: 4px solid rgba(255,255,255, 0.1);
+}
+
+.formSection .sectionTitle{
+    color: #fff;
+}
+.form input{
+    height: 48px;
+    display: block;
+    padding: 11px 16px;
+    border-radius: 4px;
+}
+
+.form input[type = 'checkbox']{
+    display: inline;
+    width: 20px;
+    height: 20px;
+}
+
+.form .sectionTitle{
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+}
+.form textarea{
+    padding: 11px 16px;
+    border-radius: 4px;
+    grid-row: 3/6;
+    grid-column: 2/3;
+    resize: none;
+}
+
+.form label{
+    font-size: 13px;
+}
+
+.form label  span{
+    color: #F47A0B;
+}
+
+.formBtn{
+    background: #E27410;
+    color: #fff;
+    border-radius: 4px;
+    padding: 14px;
+}
+
+.formCheckbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.formCheckbox+label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.formCheckbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 24px;
+    background-color: #E27410;
+    border:1px solid #E27410;
+    border-radius: 4px;
+    margin-right: 0.5em;
+    position: absolute;
+    top: -10%;
+    left: 0;
+}
+
+.formCheckbox:checked+label::before {
+    background: url('../assets/icons/checked\ icons.png') center / cover  no-repeat;
+}
+
+.contacts{
+    padding-left: 105px;
+}
+.contactsList{
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.contactsList li{
+    padding-left: 40px;
+    position: relative;
+}
+.contactsList li::before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 44px;
+    background: url('../assets/icons/Iocns.png') -51px -33px  no-repeat;
+    position: absolute;
+    left: 0;
+}
+
+.contactsList h6{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.contactsList p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 1025px) {
+    .form label  span{
+        display: block;
+    }
+    .form{
+        padding-right: 50px;
+    }
+    .contacts{
+        padding-left: 80px;
+    }
+    
+}
+@media (max-width: 875px) {
+    .formContacts{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .form{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 48px);
+        border-right: 0;
+        padding: 0;
+    }
+    .form .sectionTitle {
+        grid-column: 1/4;
+        grid-row: 1/3;
+    }
+    .form input[type = 'tel'] {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .form input[type = 'email'] {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .form textarea{
+        grid-column: 1/3;
+        grid-row: 4/6;
+    }
+    .contacts{
+        padding: 0;
+    }
+
+    .formCheckbox+label::before{
+        top: 3px;
+    }
+
+    .formSection .contactsList{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+
+
+@media (max-width: 700px) {
+   .form{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .formSection .contactsList{
+    flex-direction: column;
+   }
+
+}

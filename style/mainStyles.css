@@ -1,0 +1,99 @@
+@import url(/style/headerstyles.css);
+@import url(/style/bannerStyles.css);
+@import url(/style/servicesStyles.css);
+@import url(/style/stepsStyles.css);
+@import url(/style/teamStyles.css);
+@import url(/style/formStyles.css);
+@import url(/style/footerstyles.css);
+
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 900;
+    src: url(/fonts/Inter-Black.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    src: url(/fonts/Inter-Bold.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    src: url(/fonts/Inter-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url(/fonts/Inter-Medium.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url(/fonts/Inter-Regular.ttf);
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+h1{
+    font-size: 64px;
+    font-weight: 900;
+}
+h2{
+    color: #313B59;
+    font-size: 56px;
+    font-weight: 700;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+body{
+    font-family: 'Inter';
+    font-size: 18px;
+    color: #2D3343;
+}
+header{
+    background-color: #fff;
+}
+
+.container{
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1160px) {
+    .container{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 875px) {
+    h1{
+      font-size: 48px;
+    }
+
+    h2{
+      font-size: 40px;
+    }
+}
+@media (max-width: 672px) {
+   h1{
+    font-size: 32px;
+   }
+
+   h2{
+    font-size: 24px;
+   }
+   
+}
